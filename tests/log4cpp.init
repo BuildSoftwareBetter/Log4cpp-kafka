@@ -1,0 +1,9 @@
+# a simple test config
+# appender [category] [layout] [appender]
+# priority [category] [priority]
+appender root basic kafka localhost:9092 topic_log4cpp 1000
+priority root DEBUG
+appender sub1 basic file sub1.log
+#appender sub1 basic syslog log4cpptest
+priority sub1.sub2 ERROR
+appender sub1.sub2 pattern console The message %m at time %d%n

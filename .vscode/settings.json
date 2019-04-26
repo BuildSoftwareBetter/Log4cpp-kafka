@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "xtree": "cpp",
+        "xiosbase": "cpp",
+        "xstring": "cpp"
+    }
+}
