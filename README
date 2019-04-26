@@ -1,2 +1,28 @@
 All 'README' information is now in the HTML documentation,
 see doc/html or the project website (http://log4cpp.sf.net/).
+
+添加kafka输出，需通过cmake编译，依赖kafka
+linux 下编译：
+
+1. cmake .
+2. make
+3. sudo make install
+
+linux c++ 使用方式：
+
+1. 修改配置文件
+
+示例：
+appender.rootAppender=KafkaAppender
+appender.rootAppender.brokers=localhost:9092
+appender.rootAppender.topic=log
+appender.rootAppender.timeout=0
+appender.rootAppender.layout=BasicLayout
+
+appender 设置为 KafkaAppender，需添加brokers、topic、timeout三个参数
+
+2. 编译程序
+    依赖rdkafka++
+
+
+详细查看：https://blog.csdn.net/lwwl12/article/details/89522093
