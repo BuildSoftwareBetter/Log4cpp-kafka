@@ -23,6 +23,6 @@ appender 设置为 KafkaAppender，需添加brokers、topic、timeout三个参�
 
 2. 编译程序
     依赖rdkafka++
-
+    -lrdkafka -lz -lpthread -lrt
 
 详细查看：https://blog.csdn.net/lwwl12/article/details/89522093
